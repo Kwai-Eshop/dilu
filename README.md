@@ -5,11 +5,7 @@
   </a>
 </p>
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+![react](https://img.shields.io/npm/l/@ks-dilu/react) ![react](https://img.shields.io/npm/dw/@ks-dilu/react) ![react](https://img.shields.io/bundlephobia/minzip/@ks-dilu/react) ![react](https://img.shields.io/bundlephobia/minzip/@ks-dilu/react-micro)
 
 # dilu-sdk
 
