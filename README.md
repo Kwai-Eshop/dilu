@@ -69,6 +69,7 @@ dilu-sdk is [MIT licensed](./LICENSE).
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ybbjegj"><img src="https://avatars.githubusercontent.com/u/6147964?v=4?s=50" width="50px;" alt="明礼"/><br /><sub><b>明礼</b></sub></a><br /><a href="https://github.com/ybbjegj/dilu-sdk/commits?author=ybbjegj" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lou1swu"><img src="https://avatars.githubusercontent.com/u/27557494?v=4?s=50" width="50px;" alt="louiswu"/><br /><sub><b>louiswu</b></sub></a><br /><a href="https://github.com/ybbjegj/dilu-sdk/commits?author=lou1swu" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
