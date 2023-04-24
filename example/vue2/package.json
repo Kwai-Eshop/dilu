@@ -1,6 +1,6 @@
 {
   "name": "example-vue2",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2",
   "description": "的卢微前端Vue主应用SDK",
   "author": "ybbjegj <guomilo@gmail.com>",
   "private": true,
@@ -8,7 +8,7 @@
     "start": " vite"
   },
   "dependencies": {
-    "@ks-dilu/vue": "^0.0.2-beta.0",
+    "@ks-dilu/vue": "^0.0.2",
     "@vue/composition-api": "1.7.1",
     "core-js": "^3.8.3",
     "vue": "2.6.14",

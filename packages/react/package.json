@@ -1,6 +1,6 @@
 {
   "name": "@ks-dilu/react",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2",
   "description": "的卢微前端React主应用SDK",
   "author": "ybbjegj <guomilo@gmail.com>",
   "homepage": "",
@@ -64,7 +64,7 @@
   },
   "gitHead": "b7b7c0aff4510e5a59f22d10a8c01959f80cd363",
   "dependencies": {
-    "@ks-dilu/core": "^0.0.2-beta.0",
+    "@ks-dilu/core": "^0.0.2",
     "memoize-one": "^6.0.0"
   }
 }
