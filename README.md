@@ -15,7 +15,42 @@
 
 ## 为什么要组件化？
 
-qiankun(乾坤)在 single-spa 的基础上增加了 JS 沙盒环境，提供了 Html Entry 等能力，降低了接入微前端的接入成本；但是我们中后台业务在接入过程中发现，基于 React、Vue 技术栈，按照 qiankun API 的接入，大家的使用姿势各种各样，没有统一的标准，所以我们采用组件化的方式，基于 qiankun 微前端提供的 API 二次封装，提供路由级子应用和组件级子应用的组件，方便大家使用和接入 qiankun，所以 SDK 分别提供了 React、Vue2、Vue3 版本的 SDK；
+qiankun(乾坤)在 `single-spa` 的基础上增加了 JS 沙盒环境，提供了 Html Entry 等能力，降低了接入微前端的接入成本；但是我们中后台业务在接入过程中发现，基于 React、Vue 技术栈，按照 qiankun API 的接入，大家的使用姿势各种各样，没有统一的标准，所以我们采用组件化的方式，基于 qiankun 微前端提供的 API 二次封装，提供路由级子应用和组件级子应用的组件，方便大家使用和接入 qiankun，所以 SDK 分别提供了 React、Vue2、Vue3 版本的 SDK；
+
+以React为例，仅需要一个组件即可完成接入
+
+```tsx
+import {createRoot} from 'react/client';
+import { DLRouter } from '@ks-dilu/react';
+
+
+const micros = [{
+  activeRule: '/zone';
+  entry: 'https://xxx.cdn.com/xx',
+  name: 'test1',
+},{
+  activeRule: '/zone';
+  entry: 'https://xxx.cdn.com/xx',
+  name: 'test1'
+}]
+
+const App = () => {
+  return (
+    <DLRouter
+      fetchMicros={async () => {
+        return micros;
+      }}
+    ></DLRouter>
+  );
+};
+
+const container = createRoot(document.getElementById('main_root_id'));
+
+container.render(<App/>)
+
+```
+
+
 
 ## SDK 组成
 
