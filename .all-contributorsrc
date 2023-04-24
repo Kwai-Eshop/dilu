@@ -6,10 +6,9 @@
   "files": [
     "README.md"
   ],
-  "imageSize": 80,
+  "imageSize": 50,
   "commit": true,
-  "commitConvention": "none",
-  "contributorTemplate": "<a href=\"<%= contributor.profile %>\"><img src=\"<%= contributor.avatar_url %>\" width=\"<%= options.imageSize %>px;\" alt=\"\"/><br /><sub><b><%= contributor.name %></b></sub></a>",
+  "commitConvention": "angular",
   "contributors": [
     {
       "login": "ybbjegj",
@@ -22,5 +21,5 @@
     }
   ],
   "contributorsPerLine": 7,
-  "linkToUsage": true
+  "linkToUsage": false
 }
