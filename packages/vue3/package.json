@@ -59,7 +59,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.4",
     "typescript": "~4.8.4",
-    "view-ui-plus ": "*",
+    "view-ui-plus": "*",
     "vite": "^4.1.4",
     "vue": "^3.2.47",
     "vue-router": "4.1.6",

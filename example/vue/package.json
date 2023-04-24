@@ -34,7 +34,7 @@
     "@ks-dilu/vue": "^0.0.1",
     "vue": "^3.2.47",
     "vue-router": "4.1.6",
-    "view-ui-plus ": "*",
+    "view-ui-plus": "*",
     "lodash": "*"
   },
   "devDependencies": {
