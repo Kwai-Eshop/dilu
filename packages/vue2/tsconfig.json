@@ -1,0 +1,26 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["shim-*.d.ts","demo/**/*", "demo/**/*.ts", "demo/**/*.tsx", "demo/**/*.vue", "src/**/*", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "compilerOptions": {
+    "importsNotUsedAsValues": "remove",
+    "ignoreDeprecations": "5.0",
+    "verbatimModuleSyntax":false,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+
+    },
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "../vue/v2/types",
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+
+}

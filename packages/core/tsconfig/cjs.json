@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmitHelpers": true,
+    "module": "CommonJS",
+    "outDir": "../dist/cjs",
+    "declaration": true,
+    "declarationDir": "../dist/cjs"
+  }
+}

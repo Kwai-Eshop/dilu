@@ -1,0 +1,24 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts","demo/**/*", "demo/**/*.ts", "demo/**/*.tsx", "demo/**/*.vue", "src/**/*", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "compilerOptions": {
+    "importsNotUsedAsValues": "remove",
+    "ignoreDeprecations": "5.0",
+    "verbatimModuleSyntax":false,
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+
+    },
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "../vue/v3/types",
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

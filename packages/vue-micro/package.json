@@ -1,0 +1,60 @@
+{
+  "name": "@ks-dilu/vue-micro",
+  "version": "0.0.1",
+  "description": "的卢微前端Vue主应用SDK",
+  "author": "ybbjegj <guomilo@gmail.com>",
+  "homepage": "",
+  "private": "true",
+  "type": "module",
+  "license": "MIT",
+  "module": "./v3/index.es.js",
+  "main": "./v3/index.cjs.js",
+  "types": "./v3/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./v3/index.cjs.js",
+      "import": "./v3/index.es.js",
+      "browser": "./v3/index.es.js",
+      "types": "./v3/types/index.d.ts"
+    },
+    "./v2": {
+      "require": "./v2/index.cjs.js",
+      "import": "./v2/index.es.js",
+      "browser": "./v2/index.es.js",
+      "types": "./v2/types/index.d.ts"
+    },
+    "./umd": {
+      "v3": "./v3/index.umd.js",
+      "v2": "./v2/index.umd.js"
+    }
+  },
+  "directories": {
+    "lib": "src/",
+    "example": "example"
+  },
+  "scripts": {
+    "start": "vite"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Kwai-Eshop/dilu.git"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.1.0",
+    "vue": "^2.6.0 || ^3.2.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    },
+    "@vue/composition-api": {
+      "optional": true
+    }
+  }
+}
