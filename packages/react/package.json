@@ -62,7 +62,7 @@
   "peerDependencies": {
     "react": ">17"
   },
-  "gitHead": "17db339c514c709f6db3a44dd80fd609d56c84c7",
+  "gitHead": "b7b7c0aff4510e5a59f22d10a8c01959f80cd363",
   "dependencies": {
     "@ks-dilu/core": "^0.0.1",
     "memoize-one": "^6.0.0"

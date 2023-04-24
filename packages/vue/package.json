@@ -55,5 +55,6 @@
     "@vue/composition-api": {
       "optional": true
     }
-  }
+  },
+  "gitHead": "b7b7c0aff4510e5a59f22d10a8c01959f80cd363"
 }
