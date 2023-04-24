@@ -72,6 +72,7 @@ dilu-sdk is [MIT licensed](./LICENSE).
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lou1swu"><img src="https://avatars.githubusercontent.com/u/27557494?v=4?s=50" width="50px;" alt="louiswu"/><br /><sub><b>louiswu</b></sub></a><br /><a href="https://github.com/ybbjegj/dilu-sdk/commits?author=lou1swu" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/frankylvu"><img src="https://avatars.githubusercontent.com/u/95084932?v=4?s=50" width="50px;" alt="frankylvu"/><br /><sub><b>frankylvu</b></sub></a><br /><a href="https://github.com/ybbjegj/dilu-sdk/commits?author=frankylvu" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/zhongkang0213"><img src="https://avatars.githubusercontent.com/u/24450709?v=4?s=50" width="50px;" alt="zhongkang"/><br /><sub><b>zhongkang</b></sub></a><br /><a href="https://github.com/ybbjegj/dilu-sdk/commits?author=zhongkang0213" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/arcluziyang"><img src="https://avatars.githubusercontent.com/u/12636769?v=4?s=50" width="50px;" alt="arcluziyang"/><br /><sub><b>arcluziyang</b></sub></a><br /><a href="https://github.com/ybbjegj/dilu-sdk/commits?author=arcluziyang" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
