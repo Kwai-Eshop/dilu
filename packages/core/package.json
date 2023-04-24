@@ -16,10 +16,7 @@
     "build": "rm -rf dist && npm run build:cjs && npm run build:esm && npm run build:umd",
     "build:cjs": "tsc --project tsconfig/cjs.json  && tsc-alias -p tsconfig/cjs.json ",
     "build:esm": "tsc --project tsconfig/esm.json  && tsc-alias -p tsconfig/esm.json ",
-    "build:umd": "BABEL_ENV=build rollup -c",
-    "test": "jest --coverage --silent",
-    "test:debug": "jest --coverage",
-    "postinstall": "npx patch-package"
+    "build:umd": "BABEL_ENV=build rollup -c"
   },
   "files": [
     "dist"

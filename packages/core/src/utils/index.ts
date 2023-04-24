@@ -1,5 +1,4 @@
 export * from './tools';
-export * from './getMicroAppList';
 export * from './activeWhen';
 export * from './filterMicrosByActiveRule';
 export * from './polyfillCustomEvent';

@@ -1,10 +1,4 @@
 import { onBeforeMount, onUnmounted, defineComponent, ref, createVNode, mergeProps, onMounted, watch, computed, toRefs, reactive } from "vue";
-if (!window.fetch) {
-  throw new Error('[@dilu/core] Here is no "fetch" on the window env, you need to polyfill it');
-}
-if (!window.URL) {
-  throw new Error('[@dilu/core] Here is no "URL" on the window env, you need to polyfill it');
-}
 var FetchStatus;
 (function(FetchStatus2) {
   FetchStatus2[FetchStatus2["Init"] = 0] = "Init";
@@ -12,23 +6,6 @@ var FetchStatus;
   FetchStatus2[FetchStatus2["Fetched"] = 2] = "Fetched";
   FetchStatus2[FetchStatus2["Error"] = 3] = "Error";
 })(FetchStatus || (FetchStatus = {}));
-function isNotPureHost(host) {
-  const isValidHostWithProtocal = /^https?:\/\//.test(host);
-  const isValidHostWithoutProtocal = /^\/\//.test(host);
-  return isValidHostWithProtocal || isValidHostWithoutProtocal;
-}
-const NetWorkError = "FetchCDNHooks NetWork Response was not OK";
-const fetchPatch = async function(url, init) {
-  return window.fetch(url, init).then((response) => {
-    if (!response || !response.ok) {
-      throw new Error(response ? `${response.status} ${response.statusText}, ${NetWorkError}` : `${NetWorkError}`);
-    } else {
-      return response;
-    }
-  }).catch((error) => {
-    throw error;
-  });
-};
 var Env;
 (function(Env2) {
   Env2["Test"] = "test";
@@ -498,25 +475,6 @@ const isPromise = (obj) => {
   return !!obj && (typeof obj === "object" || typeof obj === "function") && typeof obj.then === "function";
 };
 const containerRandomId = `dilu__${+Date.now()}_${Math.floor(Math.random() * 1e3)}`;
-const debug$9 = createDebug("DL:Core-GetMicroAppList");
-const getMicroAppList = async (api, init) => {
-  try {
-    const _microList = await fetchPatch(api, init);
-    const microList = [];
-    _microList.forEach((micro) => {
-      if (!!micro.entry) {
-        microList.push({
-          ...micro
-        });
-      } else {
-        debug$9(`过滤没有入口的子应用：${micro.name}`);
-      }
-    });
-    return microList;
-  } catch {
-    return [];
-  }
-};
 function sanitizeActiveWhen(activeWhen) {
   let activeWhenArray = Array.isArray(activeWhen) ? activeWhen : [activeWhen];
   activeWhenArray = activeWhenArray.map((activeWhenOrPath) => typeof activeWhenOrPath === "function" ? activeWhenOrPath : pathToActiveWhen(activeWhenOrPath));
@@ -7876,13 +7834,10 @@ export {
   createDefaultCollect,
   createDowngradContainer,
   createWidgetMethods,
-  fetchPatch,
   filterMicrosByActiveRule,
   findDowngradContainer,
   getLifeCycle,
-  getMicroAppList,
   initGlobalState,
-  isNotPureHost,
   isPromise,
   judgeActivedMicroApp,
   loadMicroApp,

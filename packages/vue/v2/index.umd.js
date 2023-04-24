@@ -2,12 +2,6 @@
   typeof exports === "object" && typeof module !== "undefined" ? factory(exports, require("vue-demi")) : typeof define === "function" && define.amd ? define(["exports", "vue-demi"], factory) : (global2 = typeof globalThis !== "undefined" ? globalThis : global2 || self, factory(global2.DLVue = {}, global2.vueDemi));
 })(this, function(exports2, vueDemi) {
   "use strict";
-  if (!window.fetch) {
-    throw new Error('[@dilu/core] Here is no "fetch" on the window env, you need to polyfill it');
-  }
-  if (!window.URL) {
-    throw new Error('[@dilu/core] Here is no "URL" on the window env, you need to polyfill it');
-  }
   exports2.FetchStatus = void 0;
   (function(FetchStatus) {
     FetchStatus[FetchStatus["Init"] = 0] = "Init";
@@ -15,23 +9,6 @@
     FetchStatus[FetchStatus["Fetched"] = 2] = "Fetched";
     FetchStatus[FetchStatus["Error"] = 3] = "Error";
   })(exports2.FetchStatus || (exports2.FetchStatus = {}));
-  function isNotPureHost(host) {
-    const isValidHostWithProtocal = /^https?:\/\//.test(host);
-    const isValidHostWithoutProtocal = /^\/\//.test(host);
-    return isValidHostWithProtocal || isValidHostWithoutProtocal;
-  }
-  const NetWorkError = "FetchCDNHooks NetWork Response was not OK";
-  const fetchPatch = async function(url, init) {
-    return window.fetch(url, init).then((response) => {
-      if (!response || !response.ok) {
-        throw new Error(response ? `${response.status} ${response.statusText}, ${NetWorkError}` : `${NetWorkError}`);
-      } else {
-        return response;
-      }
-    }).catch((error) => {
-      throw error;
-    });
-  };
   exports2.Env = void 0;
   (function(Env) {
     Env["Test"] = "test";
@@ -501,25 +478,6 @@
     return !!obj && (typeof obj === "object" || typeof obj === "function") && typeof obj.then === "function";
   };
   const containerRandomId = `dilu__${+Date.now()}_${Math.floor(Math.random() * 1e3)}`;
-  const debug$9 = createDebug("DL:Core-GetMicroAppList");
-  const getMicroAppList = async (api, init) => {
-    try {
-      const _microList = await fetchPatch(api, init);
-      const microList = [];
-      _microList.forEach((micro) => {
-        if (!!micro.entry) {
-          microList.push({
-            ...micro
-          });
-        } else {
-          debug$9(`过滤没有入口的子应用：${micro.name}`);
-        }
-      });
-      return microList;
-    } catch {
-      return [];
-    }
-  };
   function sanitizeActiveWhen(activeWhen) {
     let activeWhenArray = Array.isArray(activeWhen) ? activeWhen : [activeWhen];
     activeWhenArray = activeWhenArray.map((activeWhenOrPath) => typeof activeWhenOrPath === "function" ? activeWhenOrPath : pathToActiveWhen(activeWhenOrPath));
@@ -7861,13 +7819,10 @@
   exports2.createDefaultCollect = createDefaultCollect;
   exports2.createDowngradContainer = createDowngradContainer;
   exports2.createWidgetMethods = createWidgetMethods;
-  exports2.fetchPatch = fetchPatch;
   exports2.filterMicrosByActiveRule = filterMicrosByActiveRule;
   exports2.findDowngradContainer = findDowngradContainer;
   exports2.getLifeCycle = getLifeCycle;
-  exports2.getMicroAppList = getMicroAppList;
   exports2.initGlobalState = initGlobalState;
-  exports2.isNotPureHost = isNotPureHost;
   exports2.isPromise = isPromise;
   exports2.judgeActivedMicroApp = judgeActivedMicroApp;
   exports2.loadMicroApp = loadMicroApp;
