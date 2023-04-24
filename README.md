@@ -58,7 +58,7 @@ $ npm run example:vue3
 
   <img src="./demo.gif" width="100%">
 
-## 📄 License
+##  License
 
 dilu-sdk is [MIT licensed](./LICENSE).
 
@@ -72,7 +72,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ybbjegj"><img src="https://avatars.githubusercontent.com/u/6147964?v=4?s=80" width="80px;" alt="明礼"/><br /><sub><b>明礼</b></sub></a><br /><a href="https://github.com/ybbjegj/dilu-sdk/commits?author=ybbjegj" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ybbjegj"><img src="https://avatars.githubusercontent.com/u/6147964?v=4" width="80px;" alt=""/><br /><sub><b>明礼</b></sub></a></td>
     </tr>
   </tbody>
   <tfoot>
