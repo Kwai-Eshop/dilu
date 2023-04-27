@@ -47,13 +47,7 @@ const getRootContainer = (container: any) => {
   return container ? container.querySelector('#' + _rootNode) : document.getElementById(_rootNode);
 };
 
-const WidgetWrap = defineComponent({
-  render(h) {
-    return <div>{this?.$slots?.default} </div>;
-  },
-});
-
-const MicroAppContainer = defineComponent({
+const MicroAppContainer: any = {
   props: ['extra'],
   data() {
     return {
@@ -66,9 +60,7 @@ const MicroAppContainer = defineComponent({
       DLMicroContext: this.DLMicroContextValue,
     };
   },
-  created() {
-    console.log('Micro', this);
-  },
+
   mounted() {
     const _this = this;
     const handler = (e: any) => {
@@ -87,14 +79,14 @@ const MicroAppContainer = defineComponent({
     });
     document.addEventListener(propsChangeEventName, handler);
   },
-  render(h) {
+  render(h: any) {
     return h('dl-micro-app-cmp', {
       props: {
         ...this.DLMicroContextValue,
       },
     });
   },
-});
+};
 
 function checkCurrentStatus() {
   if (!hadRegister) {

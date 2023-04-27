@@ -17,7 +17,7 @@
 
 qiankun(乾坤)在 `single-spa` 的基础上增加了 JS 沙盒环境，提供了 Html Entry 等能力，降低了接入微前端的接入成本；但是我们中后台业务在接入过程中发现，基于 React、Vue 技术栈，按照 qiankun API 的接入，大家的使用姿势各种各样，没有统一的标准，所以我们采用组件化的方式，基于 qiankun 微前端提供的 API 二次封装，提供路由级子应用和组件级子应用的组件，方便大家使用和接入 qiankun，所以 SDK 分别提供了 React、Vue2、Vue3 版本的 SDK；
 
-以React为例，仅需要一个组件即可完成接入
+以 React 为例，仅需要一个组件即可完成接入
 
 ```tsx
 import {createRoot} from 'react/client';
@@ -50,8 +50,6 @@ container.render(<App/>)
 
 ```
 
-
-
 ## SDK 组成
 
 SDK 提供 React 版本和 Vue 版本，详细说明可以参考各独立 SDK 说明
@@ -68,11 +66,11 @@ SDK 提供 React 版本和 Vue 版本，详细说明可以参考各独立 SDK �
 
 ## Examples
 
-在 example 文件夹内，有多个示例应用程序和多个已挂载的 Micro FE 应用程序。要使其运行，请首先克隆 dilu-sdk
+在 [example](https://github.com/Kwai-Eshop/dilu-example)中，有多个示例应用程序和多个已挂载的 Micro FE 应用程序。要使其运行，请首先克隆 dilu-sdk
 
 ```shell
-$ git clone git@github.com:Kwai-Eshop/dilu.git
-$ cd dilu
+$ git clone git@github.com:Kwai-Eshop/dilu-example.git
+$ cd dilu-example
 ```
 
 安装依赖和运行
@@ -89,7 +87,7 @@ $ npm run example:vue3
 
 访问 https://localhost:3000/
 
-  <img src="./demo.gif" width="100%">
+<img src="./demo.gif" width="100%">
 
 ## License
 

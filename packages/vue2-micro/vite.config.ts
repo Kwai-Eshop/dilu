@@ -11,7 +11,7 @@ export default defineConfig({
     createVuePlugin({
       jsx: true,
       jsxOptions: {
-        compositionAPI: 'vue-demi',
+        compositionAPI: true,
       },
     }),
   ],

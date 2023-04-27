@@ -9,15 +9,13 @@
 #### Vue3
 
 ```shell
-$ npm install -S @ks-dilu/vue-micro
+$ npm install -S @ks-dilu/vue3-micro
 ```
-
-如果业务是 Vue2.7 版本的，需要安装 vue-demi; 2.7 以下的还需要安装 @vue/composition-api；
 
 #### Vue2
 
 ```shell
-$ npm install -S vue-demi @vue/composition-api @ks-dilu/vue-micro
+$ npm install -S  @ks-dilu/vue2-micro
 
 ```
 

@@ -3,8 +3,7 @@
   "private": "true",
   "workspaces": {
     "packages": [
-      "packages/*",
-      "example/*"
+      "packages/*"
     ],
     "nohoist": [
       "**/vue",
@@ -34,16 +33,6 @@
   "scripts": {
     "dev:vue3": "yarn workspace @ks-dilu/vue3 run start",
     "dev:vue2": "yarn workspace @ks-dilu/vue2 run start",
-    "example:react": "npm-run-all --parallel start:react* start:vue-*",
-    "example:vue2": "npm-run-all --parallel start:vue2 start:react-* start:vue-*",
-    "example:vue3": "npm-run-all --parallel start:vue3 start:react-* start:vue-*",
-    "start:vue3": "yarn workspace example-vue run start",
-    "start:vue2": "yarn workspace example-vue2 run start",
-    "start:vue-micro3": "yarn workspace example-vue-micro start",
-    "start:vue-micro2": "yarn workspace example-vue2-micro start",
-    "start:react": "yarn workspace example-react run start",
-    "start:react-micro": "yarn workspace example-react-micro run start",
-    "start:react-micro2": "yarn workspace example-react-micro2 run start",
     "build": "npm run build-core && npm-run-all --parallel \"build:*\"",
     "build-core": "yarn workspace @ks-dilu/core run build",
     "build:react": "yarn workspace @ks-dilu/react run build",

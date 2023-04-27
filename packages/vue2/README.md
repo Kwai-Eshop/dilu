@@ -1,4 +1,4 @@
-## @ks-dilu/vue
+## @ks-dilu/vue2
 
 的卢微前端 React 版本的主应用组件化 SDK，分别从`路由级` `组件级`子应用视角出发，介绍如何通过 SDK 来将应用接入微前端框架
 
@@ -7,7 +7,7 @@
 #### Vue3
 
 ```shell
-$ npm install -S @ks-dilu/vue
+$ npm install -S @ks-dilu/vue3
 ```
 
 如果业务是 Vue2.7 版本的，需要安装 vue-demi; 2.7 以下的还需要安装 @vue/composition-api；
@@ -15,7 +15,7 @@ $ npm install -S @ks-dilu/vue
 #### Vue2
 
 ```shell
-$ npm install -S vue-demi @vue/composition-api @ks-dilu/vue
+$ npm install -S vue-demi @vue/composition-api @ks-dilu/vue2
 
 ```
 
@@ -25,7 +25,7 @@ $ npm install -S vue-demi @vue/composition-api @ks-dilu/vue
 
 ```tsx
 
-import { DLRouter } from '@ks-dilu/vue';
+import { DLRouter } from '@ks-dilu/vue3';
 
 
 const micros = [{
@@ -67,7 +67,7 @@ const App = () => {
 
 <script lang="ts">
 import Vue from 'vue';
-import { DLRouter, type DLRouterProps } from '@ks-dilu/vue/v2';
+import { DLRouter, type DLRouterProps } from '@ks-dilu/vue2';
 import { RouteMicros } from './micros';
 
 export default Vue.extend({
@@ -114,7 +114,7 @@ export default Vue.extend({
 
 ```tsx
 import { createRoot } from 'react/client';
-import { DLRouter } from '@ks-dilu/react';
+import { DLRouter } from '@ks-dilu/vue3';
 
 const App = () => {
   return <DLWidget entry="https://xxx.cdn.com/xx" name="test1"></DLWidget>;
@@ -136,7 +136,7 @@ container.render(<App />);
 
 <script lang="ts">
 import Vue from 'vue';
-import { DLWidget } from '@ks-dilu/vue/v2';
+import { DLWidget } from '@ks-dilu/vue2';
 
 export default Vue.extend({
   components: {
