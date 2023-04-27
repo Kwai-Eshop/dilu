@@ -19,12 +19,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@vue/composition-api': 'vue-demi',
     },
     dedupe: ['vue', 'vue-demi'],
   },
   build: {
-    outDir: '../vue/v2/',
+    outDir: './dist',
     lib: {
       entry: './src/index.tsx',
       formats: ['es', 'cjs', 'umd'],
@@ -35,7 +34,7 @@ export default defineConfig({
     },
     minify: false,
     rollupOptions: {
-      external: ['vue', 'vue-demi'],
+      external: ['vue', 'vue-demi', 'qiankun'],
       output: {
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {

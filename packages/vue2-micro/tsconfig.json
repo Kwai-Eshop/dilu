@@ -14,7 +14,7 @@
     },
     "outDir": "./dist",
     "declaration": true,
-    "declarationDir": "../vue-micro/v2/types",
+    "declarationDir": "./dist/types",
   },
 
   "references": [

@@ -9,7 +9,6 @@ export default defineComponent({
   },
   setup(props, ctx) {
     const value: any = inject('DLMicroContext');
-    debugger;
     return () => (
       <div style={{ padding: '20px' }}>
         <Title level={1}>Vue3版本的组件级应用</Title>

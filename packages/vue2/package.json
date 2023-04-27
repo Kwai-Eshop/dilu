@@ -4,7 +4,6 @@
   "description": "的卢微前端Vue主应用SDK",
   "author": "ybbjegj <guomilo@gmail.com>",
   "homepage": "",
-  "private": true,
   "type": "module",
   "license": "MIT",
   "module": "dist/index.es.js",
@@ -18,7 +17,7 @@
     "start": "vite",
     "build:bk": "run-p type-check build-only",
     "build1": " vite build",
-    "build": "rm -rf ../vue/v2 && npm run build-only && vue-tsc --declaration --emitDeclarationOnly &&  tsc-alias -p tsconfig.json && mv -f ../vue/v2/types/src/** ../vue/v2/types && rm -rf ../vue/v2/types/src && rm -rf ../vue/v2/types/demo",
+    "build": "rm -rf ./dist && npm run build-only && vue-tsc --declaration --emitDeclarationOnly &&  tsc-alias -p tsconfig.json && mv -f ./dist/types/src/** ./dist/types && rm -rf ./dist/types/src && rm -rf ./dist/types/demo",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit"
@@ -32,6 +31,10 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:Kwai-Eshop/dilu.git"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.0",
+    "qiankun": "^2.10.6"
   },
   "dependencies": {
     "@ks-dilu/core": "^0.0.2",

@@ -5,6 +5,7 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
+    "ignoreDeprecations": "5.0",
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedParameters": true,
      "lib": [
@@ -19,7 +20,6 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "importHelpers": true,
-
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": false,

@@ -22,7 +22,7 @@ const resolve = (p) => path.resolve(__dirname, './', p);
 
 console.log(resolve('src/index.ts'));
 const moduleName = 'DLReact';
-const external = ['react'];
+const external = ['react', 'qiankun'];
 
 const builds = {
   umd: {

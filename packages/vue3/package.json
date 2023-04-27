@@ -4,12 +4,11 @@
   "description": "的卢微前端Vue主应用SDK",
   "author": "ybbjegj <guomilo@gmail.com>",
   "homepage": "",
-  "private": true,
   "type": "module",
   "license": "MIT",
-  "module": "dist/v3/index.es.js",
-  "main": "dist/v3/index.cjs.js",
-  "types": "dist/v3/types/index.d.ts",
+  "module": "dist/index.es.js",
+  "main": "dist/index.cjs.js",
+  "types": "dist/types/index.d.ts",
   "directories": {
     "lib": "src/",
     "example": "example"
@@ -17,7 +16,7 @@
   "scripts": {
     "start": "vite",
     "build:bk": "run-p type-check build-only",
-    "build": "rm -rf ../vue/v3 && npm run build-only && vue-tsc --declaration --emitDeclarationOnly &&  tsc-alias -p tsconfig.json  && mv -f ../vue/v3/types/src/** ../vue/v3/types && rm -rf ../vue/v3/types/src && rm -rf ../vue/v3/types/demo",
+    "build": "rm -rf ./dist && npm run build-only && vue-tsc --declaration --emitDeclarationOnly &&  tsc-alias -p tsconfig.json  && mv -f ./dist/types/src/** ./dist/types && rm -rf ./dist/types/src && rm -rf ./dist/types/demo",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit"
@@ -37,13 +36,8 @@
     "lodash.isequal": "^4.5.0"
   },
   "peerDependencies": {
-    "@vue/composition-api": "^1.0.0-rc.1",
-    "vue": "^2.0.0 || >=3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
+    "vue": ">=3.0.0",
+    "qiankun": "^2.10.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

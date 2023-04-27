@@ -14,7 +14,7 @@
     },
     "outDir": "./dist",
     "declaration": true,
-    "declarationDir": "../vue/v2/types",
+    "declarationDir": "./dist/types",
   },
 
   "references": [

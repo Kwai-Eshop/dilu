@@ -44,13 +44,8 @@
     "@types/whatwg-fetch": "^0.0.33",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
-    "babel-loader": "^8.2.3",
     "core-js": "^3.12.1",
-    "css-loader": "^6.5.1",
     "eslint": "^6.8.0",
-    "html-webpack-plugin": "^5.5.0",
-    "less": "^4.1.2",
-    "less-loader": "^10.2.0",
     "react": "18.2.0",
     "rollup": "^2.47.0",
     "rollup-plugin-terser": "^7.0.2",
@@ -60,11 +55,13 @@
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "react": ">17"
+    "react": ">17",
+    "qiankun": "^2.10.6"
   },
   "gitHead": "b7b7c0aff4510e5a59f22d10a8c01959f80cd363",
   "dependencies": {
     "@ks-dilu/core": "^0.0.2",
-    "memoize-one": "^6.0.0"
+    "memoize-one": "^6.0.0",
+    "tslib": "^2.3.0"
   }
 }

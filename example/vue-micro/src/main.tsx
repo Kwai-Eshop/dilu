@@ -1,11 +1,11 @@
-import { registerDLMicro } from '@ks-dilu/vue-micro';
+import { registerDLMicro } from '@ks-dilu/vue3-micro';
 import { createRouter, createWebHistory } from 'vue-router';
 import ViewUIPlus from 'view-ui-plus';
 import 'view-ui-plus/dist/styles/viewuiplus.css';
 import App, { NotFound } from './App';
 import Demo from '@/components/Demo';
 import { createApp, defineComponent } from 'vue';
-
+debugger;
 registerDLMicro(
   {
     rootNodeId: 'app',
@@ -32,4 +32,4 @@ registerDLMicro(
   true,
 );
 
-export * from '@ks-dilu/vue-micro';
+export * from '@ks-dilu/vue3-micro';
