@@ -3,7 +3,7 @@ import {
   provide,
   onUnmounted,
   createApp,
-  reactive,
+  ref,
   type Component,
   type ComputedOptions,
   type MethodOptions,
@@ -41,7 +41,7 @@ const triggerCustomEvent = (props: Record<string, any>) => {
   document.dispatchEvent(event);
 };
 
-let AppCmp: any = () => <></>;
+let AppCmp: any;
 let _rootNode: string = 'root';
 let _bootstrap: DLMicroLifecyleItem;
 let _unmount: DLMicroLifecyleItem;
@@ -55,32 +55,6 @@ let hadRegister = false;
 const getRootContainer = (container: any) => {
   return container ? container.querySelector('#' + _rootNode) : document.getElementById(_rootNode);
 };
-
-const MicroAppContainer = defineComponent({
-  props: ['extra'],
-  setup(_props: any) {
-    const { extra } = _props;
-    const props = reactive<Record<string, any>>(extra);
-    provide('DLMicroContext', props);
-    const handler = (e: any) => {
-      const detail = e?.detail;
-
-      Object.keys(detail).forEach((k) => {
-        props[k] = detail[k];
-      });
-    };
-
-    onUnmounted(() => {
-      document.removeEventListener(propsChangeEventName, handler);
-    });
-
-    document.addEventListener(propsChangeEventName, handler);
-
-    return () => {
-      return <AppCmp {...props}></AppCmp>;
-    };
-  },
-});
 
 function checkCurrentStatus() {
   if (!hadRegister) {
@@ -102,7 +76,31 @@ const mount = async (props?: any) => {
 
   const { container } = props;
 
-  vueAppInstance = createApp(<MicroAppContainer extra={props}></MicroAppContainer>);
+  vueAppInstance = createApp(
+    defineComponent({
+      setup() {
+        const extra = ref<any>(props);
+        provide('DLMicroContext', extra.value);
+        const handler = (e: any) => {
+          const detail = e?.detail;
+
+          Object.keys(detail).forEach((k) => {
+            extra.value[k] = detail[k];
+          });
+        };
+
+        onUnmounted(() => {
+          document.removeEventListener(propsChangeEventName, handler);
+        });
+
+        document.addEventListener(propsChangeEventName, handler);
+
+        return () => {
+          return <AppCmp {...extra}></AppCmp>;
+        };
+      },
+    }),
+  );
   vueAppCb?.(vueAppInstance, props);
   vueAppInstance.mount(getRootContainer(container));
 
@@ -159,16 +157,7 @@ const registerDLMicro: (
   vueAppCb = vcb;
 
   if (isRenderByNonDLEnvironment && !isDLRunEnvironment()) {
-    const app = createApp(
-      defineComponent({
-        setup() {
-          provide('DLMicroContext', {});
-          return () => <AppCmp />;
-        },
-      }),
-    );
-    vcb?.(app, {});
-    app.mount(document.getElementById(rootNodeId)!);
+    mount({});
   }
   return lifecyle;
 };
