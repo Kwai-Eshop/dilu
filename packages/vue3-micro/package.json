@@ -1,6 +1,6 @@
 {
   "name": "@ks-dilu/vue3-micro",
-  "version": "0.0.2",
+  "version": "0.1.0-alpha.0",
   "description": "的卢微前端Vue主应用SDK",
   "author": "ybbjegj <guomilo@gmail.com>",
   "homepage": "",
@@ -32,7 +32,7 @@
     "url": "git@github.com:Kwai-Eshop/dilu.git"
   },
   "dependencies": {
-    "@ks-dilu/core": "^0.0.2",
+    "@ks-dilu/core": "^0.1.0-alpha.0",
     "lodash.isequal": "^4.5.0"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@ks-dilu/react",
-  "version": "0.0.2",
+  "version": "0.1.0-alpha.0",
   "description": "的卢微前端React主应用SDK",
   "author": "ybbjegj <guomilo@gmail.com>",
   "homepage": "",
@@ -55,12 +55,12 @@
     "typescript": "^4.3.5"
   },
   "peerDependencies": {
-    "react": ">17",
-    "qiankun": "^2.10.6"
+    "qiankun": "^2.10.6",
+    "react": ">17"
   },
   "gitHead": "b7b7c0aff4510e5a59f22d10a8c01959f80cd363",
   "dependencies": {
-    "@ks-dilu/core": "^0.0.2",
+    "@ks-dilu/core": "^0.1.0-alpha.0",
     "memoize-one": "^6.0.0",
     "tslib": "^2.3.0"
   }
