@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { DLWidget } from '@ks-dilu/vue/v2';
+import { DLWidget } from '@ks-dilu/vue2';
 
 export default Vue.extend({
   components: {

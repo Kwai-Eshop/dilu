@@ -4,7 +4,6 @@
   "description": "的卢微前端Vue子应用SDK",
   "author": "ybbjegj <guomilo@gmail.com>",
   "homepage": "",
-  "private": "true",
   "type": "module",
   "license": "MIT",
   "module": "dist/index.es.js",

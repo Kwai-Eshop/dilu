@@ -18,12 +18,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@vue/composition-api': 'vue-demi',
     },
     dedupe: ['vue', 'vue-demi'],
   },
   build: {
-    outDir: '../vue-micro/v2',
+    outDir: './dist',
     lib: {
       entry: './src/index.tsx',
       formats: ['es', 'cjs', 'umd'],

@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { DLRouter, type DLRouterProps } from '@ks-dilu/vue/v2';
+import { DLRouter, type DLRouterProps } from '@ks-dilu/vue2';
 import { RouteMicros } from './micros';
 
 

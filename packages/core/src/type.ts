@@ -59,9 +59,6 @@ export type CollectLogFn = (type: CollectType, options: Record<string, any>) => 
  * 运行环境，大部分的业务或项目的运行环境都可以对应到：测试环境（test）预发环境（prepare）生成环境 （production）
  */
 export enum Env {
-  Test = 'test',
-  Prepare = 'prt',
-  Production = 'prod',
   test = 'test',
   prt = 'prt',
   prod = 'prod',

@@ -14,7 +14,7 @@ export default defineConfig({
     dedupe: ['vue', 'vue-demi'],
   },
   build: {
-    outDir: '../vue-micro/v3',
+    outDir: './dist',
     lib: {
       entry: './src/index.tsx',
       formats: ['es', 'cjs', 'umd'],

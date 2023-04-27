@@ -5,7 +5,6 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedParameters": true,
      "lib": [
       "es6",

@@ -29,9 +29,7 @@
     "resolveJsonModule": true,
     "newLine": "lf",
     "declaration": false,
-    "typeRoots": [
-      "./node_modules/@types/"
-    ],
+
     "baseUrl": "./",
 
     "paths": {

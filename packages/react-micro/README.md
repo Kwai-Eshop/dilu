@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-npm install -S @es/dilu-react-micro
+npm install -S @ks-dilu/react-micro
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ qiankun 的子应用都需要重复的实现 bootstrap, mount, unmount, update �
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { registerDLMicro, isDLRunEnvironment, DLMicroContext } from '@es/dilu-react-micro';
+import { registerDLMicro, isDLRunEnvironment, DLMicroContext } from '@ks-dilu/react-micro';
 
 registerDLMicro({
   App: () => {

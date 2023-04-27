@@ -1,7 +1,7 @@
 import './install';
 import Vue from 'vue';
 //@ts-ignore
-import { registerDLMicro } from '@ks-dilu/vue-micro/v2';
+import { registerDLMicro } from '@ks-dilu/vue2-micro';
 
 import VueRouter from 'vue-router';
 import App from './App.vue';
@@ -38,7 +38,7 @@ registerDLMicro(
   true,
 );
 //@ts-ignore
-export * from '@ks-dilu/vue-micro/v2';
+export * from '@ks-dilu/vue2-micro';
 
 // router.beforeEach((to, from, next) => {
 //   if (isEmpty(history.state.current)) {

@@ -22,7 +22,7 @@ const resolve = (p) => path.resolve(__dirname, './', p);
 
 console.log(resolve('src/index.ts'));
 const moduleName = 'DLCore';
-const external = [];
+const external = ['qiankun'];
 
 const builds = {
   umd: {

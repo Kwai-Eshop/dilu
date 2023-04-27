@@ -1,2 +1,26 @@
 ## 项目说明：
 
+采用yarn + lerna 的多包管理，yarn负责依赖管理，lerna负责发包，采用固定版本的模式；
+
+### 目录结构说明
+```
+├── example          // 主子应用demo，包括React版本的主子应用，Vue版本的主子应用；
+└── packages         // vue、react版本的SDK源码
+    └── core         // 的卢SDK的核心包，提供公共方法和类型定义等
+    └── react        // react版本的主应用SDK
+    └── react-micro  // react版本的子应用SDK
+    └── vue          // vue版本的主应用SDK, 包括了vue2和vue3，这里仅仅是最终的产物，用于发包，源码都在对应的目录中；
+    └── vue-micro    // vue版本的子应用SDK, 包括了vue2和vue3，这里仅仅是最终的产物，用于发包，源码都在对应的目录中；
+    └── vue2         // vue2版本的主应用SDK, 这里只是源码，该目录最终的产物在vue/v2下；
+    └── vue2-micro   // vue2版本的子应用SDK, 这里只是源码，该目录最终的产物在vue-micro/v2下；
+    └── vue3         // vue3版本的主应用SDK, 这里只是源码，该目录最终的产物在vue/v3下；
+    └── vue3-micro   // vue3版本的子应用SDK, 这里只是源码，该目录最终的产物在vue/v3下；
+```
+
+
+
+
+
+
+
+
