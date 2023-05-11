@@ -1,5 +1,15 @@
 # 更新日志
 
+## 0.1.2
+
+- 修复@ks-dilu/vue2 不可以用的问题；
+
+## 0.1.1
+
+- 工程太大，将 example 拆分独立工程
+- 废弃@ks-dilu/vue 包，拆分为@ks-dilu/vue2 和@ks-dilu/vue3
+- 废弃@ks-dilu/vue-micro 包，拆分为@ks-dilu/vue2-micro 和@ks-dilu/vue3-micro
+
 ## 0.1.0-2023-03-30~04-30
 
 - [@ks-dilu/react] 基于电商的卢 SDK 重构, 聚合乾坤的一些高阶用法参数到 advance 中

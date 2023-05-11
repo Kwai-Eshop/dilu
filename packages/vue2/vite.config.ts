@@ -19,6 +19,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@vue/composition-api': 'vue-demi',
     },
     dedupe: ['vue', 'vue-demi'],
   },
