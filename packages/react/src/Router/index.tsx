@@ -19,9 +19,9 @@ const debug = createDebug('DL:Router');
 
 const defaultCollect = createDefaultCollect(debug);
 
-export interface DLRouterProps extends SwitchProps {
+export interface DLRouterProps extends Omit<SwitchProps, 'children'> {
   fetchMicros: () => Promise<MicroList>;
-  children?: React.ReactNode;
+  children?: React.ReactNode | ((state: any, list: any) => React.ReactNode);
 }
 
 export const DLRouter = ({

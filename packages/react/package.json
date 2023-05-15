@@ -56,7 +56,7 @@
   },
   "peerDependencies": {
     "qiankun": "^2.10.6",
-    "react": ">17"
+    "react": ">=17"
   },
   "gitHead": "b7b7c0aff4510e5a59f22d10a8c01959f80cd363",
   "dependencies": {

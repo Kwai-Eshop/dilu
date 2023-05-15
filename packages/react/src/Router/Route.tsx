@@ -5,7 +5,7 @@ export interface RouteAppProps extends Partial<AppMetadata> {
   activeRule?: Activity;
   extra?: Record<string, any>;
   extras?: Record<string, any>;
-  children?: React.ReactNode;
+  children?: any;
 }
 
 export const DLRoute = (props: RouteAppProps) => {
