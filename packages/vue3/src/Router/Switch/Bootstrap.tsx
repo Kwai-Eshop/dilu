@@ -15,6 +15,7 @@ import {
   containerIsExists,
   createDowngradContainer,
   findDowngradContainer,
+  type ActivityFn,
 } from '@ks-dilu/core';
 import useCollectError from '@/Utils/useCollectError';
 
@@ -137,7 +138,7 @@ export default defineComponent({
 
     const beforeRoutingEventListener = (e: any) => {
       const { newUrl, oldUrl } = e.detail;
-      if (newUrl != oldUrl && registrableMicros.value.length) {
+      if (newUrl != oldUrl && registrableMicros.value.length && registrableMicros.value.some(m => (m.activeRule as ActivityFn)(window.location))) {
         debug('通过single-spa:before-routing-event 调用 judgeActivedMicroApp');
         hasActivedMicroApp.value = judgeActivedMicroApp(registrableMicros.value);
       }

@@ -18,6 +18,7 @@ import {
   containerIsExists,
   createDowngradContainer,
   findDowngradContainer,
+  ActivityFn,
 } from '@ks-dilu/core';
 import memoizeOne from 'memoize-one';
 import { useHasActivedMicroApp, createDowngradComponent } from './utils';
@@ -122,7 +123,7 @@ export default (props: SwitchProps) => {
     start(props?.advanced);
     const beforeRoutingEventListener = memoizeOne((e) => {
       const { newUrl, oldUrl } = e.detail;
-      if (newUrl != oldUrl && micros.length) {
+      if (newUrl != oldUrl && micros.length && micros.some(m => (m.activeRule as ActivityFn)(window.location))) {
         debug('通过single-spa:before-routing-event 调用 judgeActivedMicroApp');
         setHasActivedMicroApp(judgeActivedMicroApp(micros));
       }
