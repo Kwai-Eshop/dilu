@@ -1,6 +1,6 @@
 {
   "name": "@ks-dilu/react-micro",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "的卢微前端子应用SDK",
   "author": "ybbjegj <guomilo@gmail.com>",
   "homepage": "",
@@ -62,5 +62,5 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "gitHead": "b7b7c0aff4510e5a59f22d10a8c01959f80cd363"
+  "gitHead": "4ef8888ad7f35ea6bedf0ddca9de5155c3a5fe0b"
 }

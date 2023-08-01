@@ -58,7 +58,7 @@
     "qiankun": "^2.10.6",
     "react": ">=17"
   },
-  "gitHead": "b7b7c0aff4510e5a59f22d10a8c01959f80cd363",
+  "gitHead": "4ef8888ad7f35ea6bedf0ddca9de5155c3a5fe0b",
   "dependencies": {
     "@ks-dilu/core": "^0.1.4",
     "memoize-one": "^6.0.0",
